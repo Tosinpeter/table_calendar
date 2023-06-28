@@ -62,6 +62,7 @@ class CalendarHeader extends StatelessWidget {
                   onTap: onHeaderTap,
                   onLongPress: onHeaderLongPress,
                   child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
                         text,
@@ -83,7 +84,6 @@ class CalendarHeader extends StatelessWidget {
                           fontSize: 14,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w400,
-                          height: 21,
                         ),
                       )
                     ],
