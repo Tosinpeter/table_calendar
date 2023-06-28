@@ -42,6 +42,10 @@ class CalendarHeader extends StatelessWidget {
     final text = headerStyle.titleTextFormatter?.call(focusedMonth, locale) ??
         DateFormat('yyyy').format(focusedMonth);
 
+    final monthText =
+        headerStyle.titleTextFormatter?.call(focusedMonth, locale) ??
+            DateFormat('MM').format(focusedMonth);
+
     return Container(
       decoration: headerStyle.decoration,
       margin: headerStyle.headerMargin,
@@ -70,15 +74,15 @@ class CalendarHeader extends StatelessWidget {
                           BoxShadow(
                               offset: Offset(0, 0),
                               color: Color.fromARGB(255, 232, 154, 165),
-                              blurRadius: 10,
-                              spreadRadius: 10)
+                              blurRadius: 20,
+                              spreadRadius: 50)
                         ]),
                         textAlign: headerStyle.titleCentered
                             ? TextAlign.center
                             : TextAlign.start,
                       ),
                       Text(
-                        'July',
+                        monthText,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFFE94057),
