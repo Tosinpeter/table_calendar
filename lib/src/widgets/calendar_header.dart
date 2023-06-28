@@ -44,7 +44,7 @@ class CalendarHeader extends StatelessWidget {
 
     final monthText =
         headerStyle.titleTextFormatter?.call(focusedMonth, locale) ??
-            DateFormat('MM').format(focusedMonth);
+            DateFormat('MMM').format(focusedMonth);
 
     return Container(
       decoration: headerStyle.decoration,
@@ -74,8 +74,8 @@ class CalendarHeader extends StatelessWidget {
                           BoxShadow(
                               offset: Offset(0, 0),
                               color: Color.fromARGB(255, 232, 154, 165),
-                              blurRadius: 20,
-                              spreadRadius: 50)
+                              blurRadius: 50,
+                              spreadRadius: 100)
                         ]),
                         textAlign: headerStyle.titleCentered
                             ? TextAlign.center
@@ -83,7 +83,9 @@ class CalendarHeader extends StatelessWidget {
                       ),
                       Text(
                         monthText,
-                        textAlign: TextAlign.center,
+                        textAlign: headerStyle.titleCentered
+                            ? TextAlign.center
+                            : TextAlign.start,
                         style: TextStyle(
                           color: Color(0xFFE94057),
                           fontSize: 14,
