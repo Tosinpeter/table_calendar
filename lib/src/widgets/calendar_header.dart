@@ -61,12 +61,32 @@ class CalendarHeader extends StatelessWidget {
                 GestureDetector(
                   onTap: onHeaderTap,
                   onLongPress: onHeaderLongPress,
-                  child: Text(
-                    text,
-                    style: headerStyle.titleTextStyle,
-                    textAlign: headerStyle.titleCentered
-                        ? TextAlign.center
-                        : TextAlign.start,
+                  child: Column(
+                    children: [
+                      Text(
+                        text,
+                        style: headerStyle.titleTextStyle.copyWith(shadows: [
+                          BoxShadow(
+                              offset: Offset(0, 0),
+                              color: Color.fromARGB(255, 232, 154, 165),
+                              blurRadius: 5)
+                        ]),
+                        textAlign: headerStyle.titleCentered
+                            ? TextAlign.center
+                            : TextAlign.start,
+                      ),
+                      Text(
+                        'July',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFFE94057),
+                          fontSize: 14,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w400,
+                          height: 21,
+                        ),
+                      )
+                    ],
                   ),
                 ),
           ),
