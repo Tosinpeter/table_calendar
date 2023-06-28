@@ -70,7 +70,8 @@ class CalendarHeader extends StatelessWidget {
                           BoxShadow(
                               offset: Offset(0, 0),
                               color: Color.fromARGB(255, 232, 154, 165),
-                              blurRadius: 5)
+                              blurRadius: 10,
+                              spreadRadius: 10)
                         ]),
                         textAlign: headerStyle.titleCentered
                             ? TextAlign.center
