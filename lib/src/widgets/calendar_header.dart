@@ -62,7 +62,7 @@ class CalendarHeader extends StatelessWidget {
                   onTap: onHeaderTap,
                   onLongPress: onHeaderLongPress,
                   child: Text(
-                    text,
+                    "text",
                     style: headerStyle.titleTextStyle,
                     textAlign: headerStyle.titleCentered
                         ? TextAlign.center
